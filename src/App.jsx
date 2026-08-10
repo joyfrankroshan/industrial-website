@@ -7,10 +7,12 @@ import  WhyHogist  from './components/Whyhogist.jsx'
 import Pricing from './components/Pricing.jsx'
 import ClientSucess from "./components/ClientSucess.jsx"
 import Testimonals from "./components/Testimonals.jsx"
-// import LocationsMap from './components/Locationsmap.jsx'
+import LocationsMap from './components/Locationsmap.jsx'
 import Faq from "./components/Faq.jsx"
 import Contacts from './components/Contacts.jsx'
 import Footer from './components/Footer.jsx'
+import Coverage from './components/Coverage'
+// import ResponsiveLocationsMap from "./components/ResponsiveLocationsMap"
 
 export default function App(){
     return(
@@ -24,10 +26,12 @@ export default function App(){
             <Pricing/>
             <ClientSucess/>
             <Testimonals/>
-            {/* <LocationsMap/> */}
+            <LocationsMap/>
+            <Coverage/>
             <Faq/>
             <Contacts/>
             <Footer/>
+            {/* <ResponsiveLocationsMap/> */}
             
         </div>
     )

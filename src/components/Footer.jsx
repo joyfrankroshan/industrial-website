@@ -1,5 +1,5 @@
 import { Box, Typography, Chip } from "@mui/material";
-import hogistLogo from "../assets/footerlogo.png";
+import hogistLogo from "../assets/header-removebg-preview.png";
 
 export default function Footer() {
   const FONT = "Inter Tight, sans-serif";
