@@ -105,7 +105,7 @@ export default function Coverage(){
                         <Typography sx={{
                             fontSize:"20px",
                             font:FONT,
-                            fontWeight:550,
+                            fontWeight:{xs:800,md:550},
                             color:BRAND_BLUE,
 
                         }}>
