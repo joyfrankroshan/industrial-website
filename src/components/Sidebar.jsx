@@ -37,11 +37,11 @@ export default function Sidebar({ open, onClose }) {
         <IconButton
           onClick={onClose}
           sx={{
-            bgcolor: blue,
+            bgcolor: "#e80200",
             color: "white",
             height: { xs: 48, sm: 60 },
             width: { xs: 48, sm: 60 },
-            "&:hover": { bgcolor: blue, color: "white" },
+            "&:hover": { bgcolor: "#e80200", color: "white" },
           }}
         >
           <CloseIcon />
@@ -94,7 +94,7 @@ export default function Sidebar({ open, onClose }) {
             variant="contained"
             sx={{
               borderRadius: "15px",
-              bgcolor: blue,
+              bgcolor: "#e80200",
               color: "white",
               textTransform: "none",
               fontSize: { xs: "14px", sm: "15px" },

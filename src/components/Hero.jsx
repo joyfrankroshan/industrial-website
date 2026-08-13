@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
 import { Box, Typography, Button, Divider } from "@mui/material";
+import { FiMessageCircle, FiSunrise, FiSun, FiMoon } from "react-icons/fi";
+import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
+
+
 
 export default function Hero() {
   const darkbackground = "#3358D3";
@@ -25,9 +29,9 @@ export default function Hero() {
   };
 
   const shifts = [
-    { label: "Morning", value: "4,200", time: "6:00 – 10:00 AM · Breakfast + lunch prep" },
-    { label: "Afternoon", value: "3,600", time: "12:00 – 3:00 PM · Hot lunch service" },
-    { label: "Night", value: "2,200", time: "8:00 PM – 1:00 AM · Dinner + late shift" },
+    { label: "Morning", value: "4,200", time: "6:00 – 10:00 AM · Breakfast + lunch prep",icon:FiSunrise },
+    { label: "Afternoon", value: "3,600", time: "12:00 – 3:00 PM · Hot lunch service",icon:FiSun },
+    { label: "Night", value: "2,200", time: "8:00 PM – 1:00 AM · Dinner + late shift",icon:FiMoon },
   ];
 
   const animation = (delay = "0s") => ({
@@ -156,6 +160,8 @@ export default function Hero() {
           }}
         >
           <Button
+                                              startIcon={<ArrowForwardOutlinedIcon size={20} strokeWidth={3} /> } 
+
             sx={{
               bgcolor: "#fff",
               color: darkbackground,
@@ -178,7 +184,7 @@ export default function Hero() {
           </Button>
 
           <Button
-            sx={{
+startIcon={<FiMessageCircle size={20} strokeWidth={3} />}            sx={{
               bgcolor: "#fff",
               color: darkbackground,
               px: 3,
@@ -292,29 +298,54 @@ export default function Hero() {
         </Typography>
 
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          {shifts.map((shift, i) => (
-            <Box key={i} sx={{ bgcolor: "#fafafa", p: 2, borderRadius: "8px" }}>
+          {shifts.map((shift, i) => {
+            const ShiftIcon=shift.icon;
+            return(
+
+            <Box key={i} sx={{ bgcolor: "#fafafa", p: 2, borderRadius: "8px",display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: 2, }}>
               <Box
                 sx={{
-                  display: "flex",
-                  flexWrap: "wrap",  
-                  justifyContent: "space-between",
+                  display: "flex",  
                   alignItems: "center",
-                  gap: 1,
+                  gap: 2,
                 }}
+               
               >
-                <Typography sx={{ color: "black", fontWeight: {xs:800,md:600}, fontSize: "16px", fontFamily: "Inter Tight, sans-serif" }}>
+                <Box
+                    sx={{
+                      width: 60,
+                      height: 60,
+                      borderRadius: "12px",
+                      bgcolor: "rgba(51, 88, 211, 0.08)",
+                      color: "#3358D3",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <ShiftIcon size={25} />
+                  </Box>
+                <Box>
+                  <Typography sx={{ color: "black", fontWeight: {xs:800,md:600}, fontSize: "16px", fontFamily: "Inter Tight, sans-serif" }}>
                   {shift.label}
                 </Typography>
-                <Typography sx={{ color: "#3358D3", fontWeight: {xs:900,md:700}, fontSize: "20px", fontFamily: "Inter Tight, sans-serif" }}>
-                  {shift.value}
-                </Typography>
-              </Box>
-              <Typography sx={{ color: "#868689", fontSize: "12.5px", mt: 1, fontFamily: "Inter Tight, sans-serif", }}>
+                 <Typography sx={{ color: "#868689", fontSize: "12.5px", mt: 1, fontFamily: "Inter Tight, sans-serif", }}>
                 {shift.time}
               </Typography>
+                
+                  </Box>
+                
+              </Box>
+             
+              <Typography sx={{ color: "#3358D3", fontWeight: {xs:900,md:700}, fontSize: "20px", fontFamily: "Inter Tight, sans-serif" }}>
+                  {shift.value}
+                </Typography>
             </Box>
-          ))}
+          )})}
         </Box>
       </Box>
     </Box>

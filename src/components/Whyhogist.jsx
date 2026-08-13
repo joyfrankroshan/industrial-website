@@ -1,22 +1,28 @@
 import {Box, Typography} from "@mui/material"
 import { motion, easeOut, useInView, animate } from "framer-motion"
 import { useRef, useState, useEffect } from "react"
+import { LuBadgeCheck, LuSmartphone, LuUserCheck } from "react-icons/lu";
+
 export default function Whyhogist(){
     const datas=[{
         id:1,
         bg:"FSSAI & ISO certified",
-        st:"Verifiable certificate numbers on record, ready for your vendor evaluation."
+        st:"Verifiable certificate numbers on record, ready for your vendor evaluation.",
+        icon:LuBadgeCheck
     },
     
 {
     id:2,
         bg:"Real-time app tracking",
-        st:"Every delivery logged and traceable — full digital accountability on each shift."
+        st:"Every delivery logged and traceable — full digital accountability on each shift.",
+        icon:LuSmartphone
+
     },
     {
         id:3,
         bg:"Dedicated account manager",
-        st:"One point of contact for your contract — no chasing, no handoffs."
+        st:"One point of contact for your contract — no chasing, no handoffs.",
+        icon:LuUserCheck
     },
 ]
 const counterRef=useRef(null)
@@ -157,7 +163,9 @@ paddingBottom: 1
                 gap:{xs:5, md:2},
                 
             }}>
-               {datas.map((data, index) => (
+               {datas.map((data, index) => {
+                const Icon=data.icon
+                return(
   <Box
     key={data.id}
     sx={{
@@ -185,7 +193,7 @@ paddingBottom: 1
         boxShadow: "0 8px 20px rgba(0,0,0,.12)",
       }}
     >
-      Icon
+      <Icon/>
     </Box>
 
     {/* Card */}
@@ -224,7 +232,7 @@ paddingBottom: 1
       </Typography>
     </Box>
   </Box>
-))}
+               )})}
                
                 </Box>
                 

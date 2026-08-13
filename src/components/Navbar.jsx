@@ -9,6 +9,8 @@ import {
   useScrollTrigger,
 } from "@mui/material";
 import DragHandleOutlinedIcon from "@mui/icons-material/DragHandleOutlined";
+import { FiMessageCircle } from "react-icons/fi";
+
 import Sidebar from "./Sidebar";
 import { useState } from "react";
 
@@ -70,6 +72,8 @@ export default function Navbar() {
             }}
           >
             <Button
+              // startIcon={<FiMessageCircle size={18} />}
+
               sx={{
                 bgcolor: darkbackground,
                 color: "#fff",
@@ -87,6 +91,8 @@ export default function Navbar() {
               Get a Quote
             </Button>
             <Button
+            startIcon={<FiMessageCircle size={20} strokeWidth={2} />}           
+
               sx={{
                 bgcolor: darkbackground,
                 color: "#fff",

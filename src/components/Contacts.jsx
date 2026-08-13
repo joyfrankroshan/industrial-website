@@ -1,6 +1,8 @@
 import { Box, TextField, Typography, Button } from "@mui/material";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import {motion,easeOut } from "framer-motion"
+import { LuBadgeCheck} from "react-icons/lu";
+
 
 export default function Contacts() {
   const FONT = "Inter Tight, sans-serif";
@@ -79,6 +81,13 @@ export default function Contacts() {
         </Typography>
 
                 </motion.div>
+                <Box sx={{ display:"flex",
+                  alignItems:"center",
+                  gap:1,
+                  color: "#868689",
+                }}>
+                   <LuBadgeCheck size={20}  />
+
 
 
         <Typography
@@ -93,6 +102,9 @@ export default function Contacts() {
           Tell us your requirement and our team will get back to you with a
           tailored plan and pricing
         </Typography>
+
+                </Box>
+                 
       </Box>
 
       {/* Right side - contact form */}
