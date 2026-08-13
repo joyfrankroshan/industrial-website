@@ -74,7 +74,7 @@ export default function Pricing() {
         <Typography
           sx={{
             fontFamily: "Inter Tight, sans-serif",
-            fontWeight: 600,
+            fontWeight: {xs:800,md:600},
             fontSize: { xs: "28px", md: "45px" },
             px: { lg: 40 },
             mb: 2,
@@ -147,7 +147,7 @@ export default function Pricing() {
               <Typography
                 sx={{
                   fontFamily: "Inter Tight, sans-serif",
-                  fontWeight: 500,
+                  fontWeight: {xs:800,md:700},
                   fontSize: "18px",
                 }}
               >
@@ -165,7 +165,7 @@ export default function Pricing() {
 }}>              <Typography
                 sx={{
                   fontFamily: "Inter Tight, sans-serif",
-                  fontWeight: 700,
+                  fontWeight: {xs:800,md:700},
                   fontSize: "24px",
                   mb: 2,
                 }}

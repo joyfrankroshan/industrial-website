@@ -54,7 +54,7 @@ export default function Contacts() {
             color: BRAND_BLUE,
             borderRadius: "20px",
             fontSize: { xs: "12px", sm: "14px" },
-            fontWeight: 600,
+            fontWeight: {xs:800,md:600},
             px: 2,
             py: 0.5,
             fontFamily: FONT,
@@ -71,7 +71,7 @@ export default function Contacts() {
                   <Typography
           sx={{
             fontSize: { xs: "26px", sm: "34px", md: "40px" },
-            fontWeight: 600,
+            fontWeight: {xs:800,md:600},
             fontFamily: FONT,
           }}
         >

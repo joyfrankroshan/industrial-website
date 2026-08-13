@@ -64,7 +64,7 @@ export default function Testtimonals() {
                     <Typography sx={{
                         fontSize: { xs: "28px", sm: "36px", md: "48px" },
                         color: "black",
-                        fontWeight: 600,
+                        fontWeight: {xs:800,md:600}
 
                     }}>
                         Industrial zones we serve
@@ -140,7 +140,7 @@ export default function Testtimonals() {
                                     </Box>
                                     <Typography
                                         sx={{
-                                            color: "black", fontWeight: 600, fontSize: "20px", fontFamily: "Inter Tight, sans-serif",
+                                            color: "black", fontWeight: {xs:800,md:600}, fontSize: "20px", fontFamily: "Inter Tight, sans-serif",
                                         }}>
                                         {testim.name}
                                     </Typography>

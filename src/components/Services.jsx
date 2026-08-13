@@ -180,7 +180,7 @@ export default function Services(){
 
                             <Typography sx={{
                                 fontFamily: "Inter Tight, sans-serif",
-                  fontWeight: 500,
+                  fontWeight: {xs:800,md:500},
                   fontSize: "24px"
                             }}>{service.icon}</Typography>
                         </Box>

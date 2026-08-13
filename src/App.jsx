@@ -26,8 +26,8 @@ export default function App(){
             <Pricing/>
             <ClientSucess/>
             <Testimonals/>
-            <LocationsMap/>
             <Coverage/>
+            <LocationsMap/>
             <Faq/>
             <Contacts/>
             <Footer/>

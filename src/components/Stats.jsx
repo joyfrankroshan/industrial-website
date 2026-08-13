@@ -74,7 +74,7 @@ export default function Stats() {
                   color: "white",
                   borderRadius: "14px",
                   fontFamily: "Inter Tight, sans-serif",
-                  fontWeight: 600,
+                  fontWeight: {xs:800,md:600},
                   letterSpacing: "0.06em",
                   fontSize: "15px",
                   textTransform: "uppercase",

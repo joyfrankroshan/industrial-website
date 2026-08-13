@@ -84,7 +84,7 @@ export default function Faq() {
             color: BRAND_BLUE,
             borderRadius: "20px",
             fontSize: { xs: "12px", sm: "14px" },
-            fontWeight: 600,
+            fontWeight: {xs:800,md:600},
             px: 2,
             fontFamily: FONT,
           }}
@@ -99,7 +99,7 @@ export default function Faq() {
                 >  <Typography
           sx={{
             fontSize: { xs: "26px", sm: "32px", md: "40px" },
-            fontWeight: 600,
+            fontWeight: {xs:800,md:600},
             fontFamily: FONT,
             textAlign: "left",
           }}
@@ -149,7 +149,7 @@ export default function Faq() {
                   <Typography
                     sx={{
                       fontSize: {  xs: "16px", md: "18px" },
-                      fontWeight: 510,
+                      fontWeight: {xs:800,md:510},
                       fontFamily: FONT,
                     }}
                   >

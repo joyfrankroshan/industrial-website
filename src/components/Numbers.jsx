@@ -83,7 +83,7 @@ export default function Numbers() {
                     position: "relative",
                     zIndex: 1,
                     fontSize: { xs: "34px", sm: "38px", md: "48px" },
-                    fontWeight: 700,
+                    fontWeight: {xs:1000,md:700},
                     color: "#0F172A",
                     fontFamily: "Inter Tight, sans-serif",
                     display: "block",

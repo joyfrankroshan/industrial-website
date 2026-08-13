@@ -48,7 +48,7 @@ export default function ClientSucess() {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
                     <Typography sx={{
-                        color: "black", fontWeight: 700, fontSize: { xs: "28px", sm: "34px", md: "40px" }, fontFamily: "Inter Tight, sans-serif",
+                        color: "black", fontWeight: {xs:800,md:700}, fontSize: { xs: "28px", sm: "34px", md: "40px" }, fontFamily: "Inter Tight, sans-serif",
                         mb: 1,
 
                     }}>
@@ -103,7 +103,7 @@ export default function ClientSucess() {
                                 }}>
 
                                 <Typography sx={{
-                                    color: "black", fontWeight: 600, fontSize: "20px", fontFamily: "Inter Tight, sans-serif",
+                                    color: "black", fontWeight: {xs:800,md:600}, fontSize: "20px", fontFamily: "Inter Tight, sans-serif",
                                     mb: 1,
 
                                 }}>

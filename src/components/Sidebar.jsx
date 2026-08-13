@@ -63,7 +63,7 @@ export default function Sidebar({ open, onClose }) {
             <Box key={label}>
               <Typography
                 sx={{
-                  fontWeight: i === 0 ? 600 : 500,
+                  fontWeight:  800,
                   fontSize: { xs: "15px", sm: "16px" },
                   fontFamily: "Inter Tight, sans-serif",
                 }}
@@ -84,6 +84,7 @@ export default function Sidebar({ open, onClose }) {
               color: "white",
               textTransform: "none",
               fontSize: { xs: "14px", sm: "15px" },
+              fontWeight: {xs:800,md:700},
               py: { xs: 1, sm: 1.2 },
             }}
           >
@@ -99,6 +100,7 @@ export default function Sidebar({ open, onClose }) {
               fontSize: { xs: "14px", sm: "15px" },
               px: 2,
               py: { xs: 1, sm: 1.2 },
+              fontWeight: {xs:800,md:700}
             }}
           >
             WhatsApp

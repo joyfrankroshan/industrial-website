@@ -124,7 +124,7 @@ useEffect(()=>{
 >
                     <Typography sx={{
                     fontSize:"48px",
-                    fontWeight:600}}>
+                    fontWeight: {xs:800,md:700}}}>
                        {count}%
                     </Typography>
                     <Typography
@@ -203,7 +203,7 @@ paddingBottom: 1
       <Typography
         sx={{
           fontFamily: "Inter Tight, sans-serif",
-          fontWeight: 600,
+          fontWeight: {xs:800,md:600},
           fontSize: "20px",
           mb: 1,
         }}

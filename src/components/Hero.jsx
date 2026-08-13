@@ -98,7 +98,7 @@ export default function Hero() {
             ...(show ? animation("0.2s") : hiddenAnimation),
           }}
         >
-          <Box component="span" sx={{ fontWeight: 700 }}>
+          <Box component="span" sx={{ fontWeight:{xs:800,md:700 }}}>
             {content.title1}
           </Box>
 
@@ -108,7 +108,7 @@ export default function Hero() {
 
           <br />
 
-          <Box component="span" sx={{ fontWeight: 700 }}>
+          <Box component="span" sx={{ fontWeight: {xs:800,md:700 }}}>
             {content.title3}
           </Box>
           <br />
@@ -163,7 +163,7 @@ export default function Hero() {
               py: 2,
               borderRadius: "15px",
               fontSize: "15px",
-              fontWeight: 700,
+              fontWeight: {xs:800,md:700},
               fontFamily: "Inter Tight, sans-serif",
               textTransform: "none",
               ...(show ? animation("0.5s") : hiddenAnimation),
@@ -185,7 +185,7 @@ export default function Hero() {
               py: 2,
               borderRadius: "15px",
               fontSize: "15px",
-              fontWeight: 700,
+              fontWeight: {xs:800,md:700},
               fontFamily: "Inter Tight, sans-serif",
               textTransform: "none",
               ...(show ? animation("0.6s") : hiddenAnimation),
@@ -271,7 +271,7 @@ export default function Hero() {
             fontSize: "19px",
             fontFamily: "Inter Tight, sans-serif",
             color: "#1d1d1e",
-            fontWeight: 600,
+            fontWeight: {xs:800,md:600},
             mb: 1,
             textTransform: "none",
           }}
@@ -303,14 +303,14 @@ export default function Hero() {
                   gap: 1,
                 }}
               >
-                <Typography sx={{ color: "black", fontWeight: 600, fontSize: "16px", fontFamily: "Inter Tight, sans-serif" }}>
+                <Typography sx={{ color: "black", fontWeight: {xs:800,md:600}, fontSize: "16px", fontFamily: "Inter Tight, sans-serif" }}>
                   {shift.label}
                 </Typography>
-                <Typography sx={{ color: "#3358D3", fontWeight: 700, fontSize: "20px", fontFamily: "Inter Tight, sans-serif" }}>
+                <Typography sx={{ color: "#3358D3", fontWeight: {xs:900,md:700}, fontSize: "20px", fontFamily: "Inter Tight, sans-serif" }}>
                   {shift.value}
                 </Typography>
               </Box>
-              <Typography sx={{ color: "#868689", fontSize: "12.5px", mt: 1, fontFamily: "Inter Tight, sans-serif" }}>
+              <Typography sx={{ color: "#868689", fontSize: "12.5px", mt: 1, fontFamily: "Inter Tight, sans-serif", }}>
                 {shift.time}
               </Typography>
             </Box>
