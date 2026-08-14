@@ -35,12 +35,19 @@ export default function Contacts() {
         flexDirection: { xs: "column", md: "row" },
         alignItems: { xs: "stretch", md: "center" },
         justifyContent: { xs: "flex-start", md: "space-between" },
-        px: { xs: 2, sm: 4, md: 12 },
+        px: { xs: 2, sm: 4, lg:12 },
         py: { xs: 4, md: 6 },
         gap: { xs: 4, md: 3 },
       }}
     >
       {/* Left side - heading copy */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.6, ease: easeOut }}
+        style={{ width: "100%" }}
+      >
       <Box
         sx={{
           display: "flex",
@@ -48,7 +55,9 @@ export default function Contacts() {
           alignItems: { xs: "center", md: "flex-start" },
           justifyContent: "flex-start",
           textAlign: { xs: "center", md: "left" },
-          gap: 2,
+          gap: { xs: 1.5, sm: 2 },
+          width: "100%",
+          maxWidth: { xs: "100%", sm: 480, md: 460 },
         }}
       >
         <Typography
@@ -56,7 +65,7 @@ export default function Contacts() {
             bgcolor: "#3358d312",
             color: BRAND_BLUE,
             borderRadius: "20px",
-            fontSize: { xs: "12px", sm: "14px" },
+            fontSize: { xs: "11px", sm: "13px", md: "14px" },
             fontWeight: {xs:800,md:600},
             px: 2,
             py: 0.5,
@@ -65,36 +74,31 @@ export default function Contacts() {
         >
           GET STARTED
         </Typography>
-        <motion.div
-                    initial={{ opacity: 0, x: 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.6, ease: easeOut }}
-                >
-                  <Typography
+
+        <Typography
           sx={{
-            fontSize: { xs: "26px", sm: "34px", md: "40px" },
+            fontSize: { xs: "22px", sm: "28px", md: "34px", lg: "40px" },
             fontWeight: {xs:800,md:600},
             fontFamily: FONT,
+            lineHeight: 1.25,
           }}
         >
           Get a custom quote for your factory
         </Typography>
 
-                </motion.div>
-                <Box sx={{ display:"flex",
-                  alignItems:"center",
-                  gap:1,
-                  color: "#868689",
-                }}>
-                   <LuBadgeCheck size={20}  />
-
-
+        <Box sx={{ display:"flex",
+          alignItems:"center",
+          gap:1,
+          color: "#868689",
+          flexWrap: "wrap",
+          justifyContent: { xs: "center", md: "flex-start" },
+        }}>
+           <LuBadgeCheck size={20} style={{ flexShrink: 0 }} />
 
         <Typography
           sx={{
             color: "#868689",
-            fontSize: { xs: "13px", sm: "15px", md: "16px" },
+            fontSize: { xs: "13px", sm: "14px", md: "16px" },
             fontWeight: 300,
             fontFamily: FONT,
             maxWidth: { xs: "100%", md: 420 },
@@ -104,9 +108,10 @@ export default function Contacts() {
           tailored plan and pricing
         </Typography>
 
-                </Box>
-                 
+        </Box>
+
       </Box>
+      </motion.div>
 
       {/* Right side - contact form */}
       <motion.div

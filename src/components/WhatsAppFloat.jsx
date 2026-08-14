@@ -19,7 +19,7 @@ export default function WhatsAppFloat() {
         display: "flex",
         alignItems: "center",
         gap: 1,
-        bgcolor: "#25D366",
+        bgcolor: "#2e7d53",
         color: "#fff",
         textDecoration: "none",
         px: { xs: 2, md: 2.5 },
