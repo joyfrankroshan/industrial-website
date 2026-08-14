@@ -21,7 +21,7 @@ export default function Hero() {
     title3: "MEALS,",
     title4: "RUN",
     title5: " LIKE",
-    title6: "CLOCKOVER.",
+    title6: "CLOCKWORK.",
 
     desc:
       "FSSAI-certified industrial catering serving 10,000+ workers daily across Chennai's manufacturing belt — shift after shift, without a miss.",
@@ -48,6 +48,7 @@ export default function Hero() {
 
   return (
     <Box
+      id="hero"
       sx={{
         position: "relative",
         overflowX: "hidden",
@@ -161,7 +162,13 @@ export default function Hero() {
         >
           <Button
                                               startIcon={<ArrowForwardOutlinedIcon size={20} strokeWidth={3} /> } 
-
+            onClick={() => {
+              const el = document.getElementById("contact");
+              if (el) {
+                const y = el.getBoundingClientRect().top + window.pageYOffset - 68;
+                window.scrollTo({ top: y, behavior: "smooth" });
+              }
+            }}
             sx={{
               bgcolor: "#fff",
               color: darkbackground,
@@ -184,6 +191,7 @@ export default function Hero() {
           </Button>
 
           <Button
+            onClick={() => window.open("https://api.whatsapp.com/send/?phone=919962667733&text=&type=phone_number&app_absent=0", "_blank")}
 startIcon={<FiMessageCircle size={20} strokeWidth={3} />}            sx={{
               bgcolor: "#fff",
               color: darkbackground,

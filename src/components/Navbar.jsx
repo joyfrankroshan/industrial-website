@@ -5,33 +5,62 @@ import {
   Box,
   Button,
   IconButton,
-  Slide,
-  useScrollTrigger,
 } from "@mui/material";
 import DragHandleOutlinedIcon from "@mui/icons-material/DragHandleOutlined";
 import { FiMessageCircle } from "react-icons/fi";
 
 import Sidebar from "./Sidebar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const darkbackground = "#3358D3";
 
-const navLinks = ["Services", "Why Hogist", "Pricing", "Location", "FAQ"];
+const navLinks = [
+  { label: "Services", id: "services" },
+  { label: "Why Hogist", id: "why-hogist" },
+  { label: "Pricing", id: "pricing" },
+  { label: "Location", id: "location" },
+  { label: "FAQ", id: "faq" },
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const trigger = useScrollTrigger();
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleNavClick = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const navHeight = scrolled ? 68 : 84;
+    const y = el.getBoundingClientRect().top + window.pageYOffset - navHeight;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <Slide direction="down" in={!trigger} appear={false} timeout={600}>
-      <AppBar position="sticky" color="inherit" elevation={0}>
-        <Toolbar
-          sx={{
-            height: 84,
-            justifyContent: "space-between",
-            px: { xs: 2, sm: 3, md: 4, lg: 6 },
-          }}
-        >
+    <>
+    <AppBar
+      position="fixed"
+      color="inherit"
+      elevation={0}
+      sx={{
+        transition: "all 0.3s ease",
+        boxShadow: scrolled ? "0 2px 12px rgba(0,0,0,0.08)" : "none",
+      }}
+    >
+      <Toolbar
+        sx={{
+          height: scrolled ? 68 : 84,
+          transition: "height 0.3s ease",
+          justifyContent: "space-between",
+          px: { xs: 2, sm: 3, md: 4, lg: 6 },
+        }}
+      >
           <Box
             component="img"
             src={HeaderImg}
@@ -48,9 +77,10 @@ export default function Navbar() {
               paddingLeft: { md: 3, lg: 8 },
             }}
           >
-            {navLinks.map((label) => (
+            {navLinks.map(({ label, id }) => (
               <Button
-                key={label}
+                key={id}
+                onClick={() => handleNavClick(id)}
                 sx={{
                   color: "#1D1D1E",
                   fontSize: { md: "13px", lg: "14px" },
@@ -72,8 +102,7 @@ export default function Navbar() {
             }}
           >
             <Button
-              // startIcon={<FiMessageCircle size={18} />}
-
+              onClick={() => handleNavClick("contact")}
               sx={{
                 bgcolor: darkbackground,
                 color: "#fff",
@@ -91,6 +120,7 @@ export default function Navbar() {
               Get a Quote
             </Button>
             <Button
+            onClick={() => window.open("https://api.whatsapp.com/send/?phone=919962667733&text=&type=phone_number&app_absent=0", "_blank")}
             startIcon={<FiMessageCircle size={20} strokeWidth={2} />}           
 
               sx={{
@@ -127,6 +157,7 @@ export default function Navbar() {
 
         <Sidebar open={open} onClose={() => setOpen(false)} />
       </AppBar>
-    </Slide>
+    <Box sx={{ height: scrolled ? 68 : 84, transition: "height 0.3s ease" }} />
+    </>
   );
 }

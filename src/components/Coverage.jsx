@@ -35,6 +35,7 @@ export default function Coverage(){
 
             }}>
                 <Typography sx={{fontFamily:FONT,fontSize:"16px",
+                color:"#868689"
 
                 }}> COVERAGE</Typography>
                 <motion.div
@@ -42,14 +43,15 @@ export default function Coverage(){
                 whileInView={{opacity:1,x:0}}
                 viewport={{once:true,amount:0.3}}
                 transition={{duration:0.6,ease:easeOut}}>
-                    <Typography sx={{fontFamily:FONT,fontSize:{xs:"28px",sm:"34px",md:"40px"},fontWeight:700,textAlign:"center"
+                    <Typography sx={{fontFamily:FONT,fontSize:{xs:"28px",sm:"34px",md:"43px"},fontWeight:700,textAlign:"center"
 
                 }}> Industrial zones we serve</Typography>
                 
 
                 </motion.div>
                 
-                <Typography sx={{fontFamily:FONT,fontSize:"18px",fontWeight:300,textAlign:"center"
+                <Typography sx={{fontFamily:FONT,fontSize:"18px",fontWeight:300,textAlign:"center",
+                color:"#868689"
 
                 }}> Established operations across Chennai's core manufacturing corridors.
 

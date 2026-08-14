@@ -42,6 +42,7 @@ useEffect(()=>{
 
     return(
         <Box
+        id="why-hogist"
         sx={{
             bgcolor:"#fff",
             px:{xs:3, sm:5, md:9},
@@ -69,7 +70,7 @@ useEffect(()=>{
                 <Typography sx={{
                                                     fontFamily: "Inter Tight, sans-serif",
                   fontWeight: 500,
-                  fontSize: "18px",
+                  fontSize: "16px",
                   mb:1,
                   paddingRight:{lg:20},
                                                 color: "#868689",

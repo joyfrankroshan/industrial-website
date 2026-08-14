@@ -33,8 +33,8 @@ export default function ClientSucess() {
                 textAlign: { xs: "center", }
             }}>
                 <Typography sx={{
-                    color: "black", fontWeight: 400, fontSize: "18px", fontFamily: "Inter Tight, sans-serif",
-                    mb: 1,
+                    color: "black", fontWeight: 400, fontSize: "16px", fontFamily: "Inter Tight, sans-serif",
+                    mb: 1,color:"#868689"
 
                 }}>
                     CLIENT SUCCESS

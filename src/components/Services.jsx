@@ -51,7 +51,7 @@ export default function Services(){
     ]
     return(
         
-        <Box sx={{
+        <Box id="services" sx={{
             // display:"flex",
             // flexDirection:{xs:"column",md:"row"},
             // justifyContent:"center",
@@ -79,6 +79,7 @@ export default function Services(){
               fontWeight: 600,
               letterSpacing: "0.08em",
               fontFamily: "Inter Tight, sans-serif",
+              color:"#868689"
                 }}
                 >
                     CARE FEATURES
@@ -107,6 +108,7 @@ export default function Services(){
                fontSize: "15px",
               fontWeight: 400,
               fontFamily: "Inter Tight, sans-serif",
+              color:"#868689",
               
               mt: 2,
             }}>
@@ -249,4 +251,3 @@ export default function Services(){
 
         </Box>
     )}
-

@@ -8,12 +8,15 @@ export default function Pricing() {
       id: 1,
       plan: "Up to 200 workers",
       amount: "₹80–120 ",
+      unit: "/ meal", 
+
       points: [
         "Single or two-shift service",
 "Standard South & North Indian menu",
 "Off-site tiffin delivery"
       ],
       button: "Get a quote",
+     
     },
     {
       id: 2,
@@ -27,6 +30,7 @@ export default function Pricing() {
 "Dedicated account manager"
       ],
       button: "Get a quote",
+       unit: "/ tier",
     },
     {
       id: 3,
@@ -42,7 +46,7 @@ export default function Pricing() {
   ];
 
   return (
-    <Box sx={{ bgcolor: "white", color: "black", px: 2, py: 6 }}>
+    <Box id="pricing" sx={{ bgcolor: "white", color: "black", px: 2, py: 6 }}>
       {/* Header */}
       <Box
         sx={{
@@ -58,8 +62,8 @@ export default function Pricing() {
           sx={{
             fontFamily: "Inter Tight, sans-serif",
             fontWeight: 500,
-            fontSize: "14px",
-            color: "#3358D3",
+            fontSize: "16px",
+            color: "#868689",
             mb: 2,
           }}
         >
@@ -75,7 +79,7 @@ export default function Pricing() {
           sx={{
             fontFamily: "Inter Tight, sans-serif",
             fontWeight: {xs:800,md:600},
-            fontSize: { xs: "28px", md: "45px" },
+            fontSize: { xs: "28px", md: "43px" },
             px: { lg: 40 },
             mb: 2,
           }}
@@ -193,7 +197,7 @@ export default function Pricing() {
                     ml: 1,
                   }}
                 >
-                  / meal
+                 {item.unit}
                 </Typography>
               </Box>
 

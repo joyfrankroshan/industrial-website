@@ -13,9 +13,26 @@ import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 
 const blue = "#3358D3";
 
-const navLinks = ["Services", "Why Hogist", "Pricing", "Location", "FAQ"];
+const navLinks = [
+  { label: "Services", id: "services" },
+  { label: "Why Hogist", id: "why-hogist" },
+  { label: "Pricing", id: "pricing" },
+  { label: "Location", id: "location" },
+  { label: "FAQ", id: "faq" },
+];
 
 export default function Sidebar({ open, onClose }) {
+  const handleNavClick = (id) => {
+    onClose();
+    // wait for the drawer close animation before scrolling
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const y = el.getBoundingClientRect().top + window.pageYOffset - 68;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }, 250);
+  };
+
   return (
     <Drawer
       anchor="right"
@@ -37,11 +54,11 @@ export default function Sidebar({ open, onClose }) {
         <IconButton
           onClick={onClose}
           sx={{
-            bgcolor: "#e80200",
+            bgcolor: "#3358D3",
             color: "white",
             height: { xs: 48, sm: 60 },
             width: { xs: 48, sm: 60 },
-            "&:hover": { bgcolor: "#e80200", color: "white" },
+            "&:hover": { bgcolor: "#black", color: "white" },
           }}
         >
           <CloseIcon />
@@ -59,8 +76,12 @@ export default function Sidebar({ open, onClose }) {
         />
 
         <Box sx={{ display: "flex", flexDirection: "column", gap: 5, mt: 3 }}>
-          {navLinks.map((label, i) => (
-            <Box key={label}>
+          {navLinks.map(({ label, id }) => (
+            <Box
+              key={id}
+              onClick={() => handleNavClick(id)}
+              sx={{ cursor: "pointer" }}
+            >
               <Typography
                 sx={{
                   fontWeight:  800,
@@ -78,6 +99,7 @@ export default function Sidebar({ open, onClose }) {
         <Box sx={{ display: "flex", flexDirection: "column", gap: 3, mt: 3 }}>
           <Button
             variant="contained"
+            onClick={() => handleNavClick("contact")}
             sx={{
               borderRadius: "15px",
               bgcolor: blue,
@@ -92,9 +114,10 @@ export default function Sidebar({ open, onClose }) {
           </Button>
           <Button
             variant="contained"
+            onClick={() => window.open("https://api.whatsapp.com/send/?phone=919962667733&text=&type=phone_number&app_absent=0", "_blank")}
             sx={{
               borderRadius: "15px",
-              bgcolor: "#e80200",
+              bgcolor: "#3358D3",
               color: "white",
               textTransform: "none",
               fontSize: { xs: "14px", sm: "15px" },

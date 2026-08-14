@@ -62,7 +62,7 @@ export default function Testtimonals() {
                     transition={{ duration: 0.6, ease: easeOut }}
                 >
                     <Typography sx={{
-                        fontSize: { xs: "28px", sm: "36px", md: "48px" },
+                        fontSize: { xs: "28px", sm: "36px", md: "43px" },
                         color: "black",
                         fontWeight: {xs:800,md:600}
 

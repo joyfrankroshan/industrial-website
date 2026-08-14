@@ -29,6 +29,7 @@ export default function Contacts() {
 
   return (
     <Box
+      id="contact"
       sx={{
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
@@ -132,10 +133,25 @@ export default function Contacts() {
             fontFamily: FONT,
             fontSize: { xs: "22px", sm: "28px" },
             fontWeight: 700,
-            mb: 3,
+            
           }}
         >
-          Send Us Message
+         REQUEST MY QUOTE
+
+        </Typography>
+        <Typography
+          sx={{
+            fontFamily: FONT,
+            fontSize: { xs: "15px" },
+            
+            mb: 3,
+            color:"#868689"
+          }}
+        >
+        Five quick details — that's all we need to start.
+
+
+
         </Typography>
 
         {/* Fields in a responsive grid: 1 col mobile, 2 col tablet+ */}

@@ -5,6 +5,13 @@ export default function Footer() {
   const FONT = "Inter Tight, sans-serif";
   const BRAND_BLUE = "#3358D3";
 
+  const handleNavClick = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const y = el.getBoundingClientRect().top + window.pageYOffset - 68;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
   const locations = [
     "Catering in Sriperumbudur",
     "Catering in Oragadam",
@@ -19,7 +26,12 @@ export default function Footer() {
     "School Catering",
   ];
 
-  const companyLinks = ["About Hogist", "Get a Quote", "FAQ", "Contact"];
+  const companyLinks = [
+    { label: "About Hogist", id: "hero" },
+    { label: "Get a Quote", id: "contact" },
+    { label: "FAQ", id: "faq" },
+    { label: "Contact", id: "contact" },
+  ];
 
   return (
     <Box
@@ -215,9 +227,10 @@ export default function Footer() {
               Company
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
-              {companyLinks.map((item) => (
+              {companyLinks.map(({ label, id }) => (
                 <Typography
-                  key={item}
+                  key={label}
+                  onClick={() => handleNavClick(id)}
                   sx={{
                     fontFamily: FONT,
                     color: "#9aa0ad",
@@ -227,7 +240,7 @@ export default function Footer() {
                     "&:hover": { color: BRAND_BLUE },
                   }}
                 >
-                  {item}
+                  {label}
                 </Typography>
               ))}
             </Box>

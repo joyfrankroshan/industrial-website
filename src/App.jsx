@@ -12,6 +12,7 @@ import Faq from "./components/Faq.jsx"
 import Contacts from './components/Contacts.jsx'
 import Footer from './components/Footer.jsx'
 import Coverage from './components/Coverage'
+import WhatsAppFloat from './components/WhatsAppFloat.jsx'
 // import ResponsiveLocationsMap from "./components/ResponsiveLocationsMap"
 
 export default function App(){
@@ -31,6 +32,7 @@ export default function App(){
             <Faq/>
             <Contacts/>
             <Footer/>
+            <WhatsAppFloat/>
             {/* <ResponsiveLocationsMap/> */}
             
         </div>

@@ -4,6 +4,7 @@ import { motion, easeOut } from "framer-motion"
 
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import faq1 from "../assets/faq1.png";
 
 const FONT = "Inter Tight, sans-serif";
 const BRAND_BLUE = "#3358D3";
@@ -56,14 +57,19 @@ export default function Faq() {
 
   return (
     <Box
+      id="faq"
       sx={{
         display:"flex",
-        gap:2,
+        flexDirection: { xs: "column", md: "row" },
+        gap: { xs: 4, md: 8 },
+        alignItems: { xs: "center" },
+        justifyContent:"space-between",
         
         py: { xs: 4, md: 3 },
         px: { xs: 2, sm: 3, md: 2 },
         width:"100%",
-        pl: { xs: 2, sm: 8, md: 20,  }
+        pl: { xs: 2, sm: 8, md: 10,  },
+        pr: { xs: 2, sm: 8, md: 2 },
       }}
     >
       <Box
@@ -74,7 +80,7 @@ export default function Faq() {
           justifyContent: "flex-start",
           gap:2,
           
-          px: 2,
+          px: 1,
           width: "100%",
         }}
       >
@@ -184,6 +190,31 @@ export default function Faq() {
             );
           })}
         </Box>
+      </Box>
+
+      {/* Right side image */}
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "flex-end",
+          justifyContent: "center",
+          width: "100%",
+          overflow: "hidden",
+          px: 1,
+          pt: { xs: 4, sm: 10, md: 16, lg: 25 },
+        }}
+      >
+        <Box
+          component="img"
+          src={faq1}
+          alt="Hogist catering service"
+          sx={{
+            width: "100%",
+            height: { xs: 320, sm: 420, md: 480, lg: 560 },
+            borderRadius: "30px",
+            objectFit: "cover",
+          }}
+        />
       </Box>
     </Box>
   );

@@ -7,6 +7,7 @@ const MAP_IMAGE_SRC = "/map-locations.png";
 export default function LocationsMap() {
   return (
     <Box
+      id="location"
       sx={{
         width: "100%",
         display: "flex",
