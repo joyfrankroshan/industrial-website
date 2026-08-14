@@ -167,12 +167,22 @@ paddingBottom: 1
                {datas.map((data, index) => {
                 const Icon=data.icon
                 return(
-  <Box
+  <motion.div
     key={data.id}
+    initial={{ opacity: 0, x: 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true, amount: 0.4 }}
+    transition={{ duration: 0.6, delay: index * 0.15, ease: easeOut }}
+    style={{
+      width: "100%",
+      display: "flex",
+      justifyContent: index === 1 ? "flex-end" : "flex-start",
+    }}
+  >
+  <Box
     sx={{
       position: "relative",
       width: {xs:"100%", md: index === 1 ? "85%" : "100%"},
-      ml: {xs:0, md: index === 1 ? "auto" : 0},
     }}
   >
     {/* Icon Placeholder */}
@@ -233,6 +243,7 @@ paddingBottom: 1
       </Typography>
     </Box>
   </Box>
+  </motion.div>
                )})}
                
                 </Box>

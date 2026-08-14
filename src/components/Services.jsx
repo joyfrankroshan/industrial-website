@@ -1,5 +1,6 @@
 import {Box,Typography} from "@mui/material"
 import {motion} from "framer-motion";
+import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 
 export default function Services(){
     const services=[
@@ -49,6 +50,15 @@ export default function Services(){
         }
         
     ]
+
+    const handleContactClick = () => {
+        const el = document.getElementById("contact");
+        if (el) {
+            const y = el.getBoundingClientRect().top + window.pageYOffset - 68;
+            window.scrollTo({ top: y, behavior: "smooth" });
+        }
+    };
+
     return(
         
         <Box id="services" sx={{
@@ -210,9 +220,11 @@ export default function Services(){
 </Box>
 
 <Box
+  onClick={handleContactClick}
   sx={{
     display: "flex",
       alignItems: "center",
+      justifyContent: "space-between",
      bgcolor: "#3358D3",
     color: "#fff",
     
@@ -223,12 +235,20 @@ export default function Services(){
     fontWeight: 500,
     fontSize: "16px",
     cursor: "pointer",
-    transition: "background-color 0.3s ease",
-    
+    transition: "background-color 0.3s ease, padding-left 0.3s ease",
+    "&:hover": {
+      bgcolor: "#000",
+    },
   }}
 >
   Learn More
-  
+  <ArrowForwardOutlinedIcon
+    sx={{
+      fontSize: 20,
+      transition: "transform 0.3s ease",
+    //   ".MuiBox-root:hover > &": { transform: "translateX(4px)" },
+    }}
+  />
 </Box>
                         
                         

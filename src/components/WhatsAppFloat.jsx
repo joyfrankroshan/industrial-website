@@ -22,14 +22,14 @@ export default function WhatsAppFloat() {
         bgcolor: "#2e7d53",
         color: "#fff",
         textDecoration: "none",
-        px: { xs: 2, md: 2.5 },
-        py: 1.3,
+        px: { xs: 2, md: 3 },
+        py: 2,
         borderRadius: "50px",
         boxShadow: "0 4px 14px rgba(0,0,0,0.25)",
         fontFamily: "Inter Tight, sans-serif",
         transition: "transform 0.2s ease, background-color 0.2s ease",
         "&:hover": {
-          bgcolor: "#1ebe5b",
+          bgcolor: "#349a63",
           transform: "scale(1.05)",
         },
       }}

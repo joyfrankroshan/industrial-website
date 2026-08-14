@@ -229,6 +229,13 @@ export default function Pricing() {
 
               <Button
                 fullWidth
+                onClick={() => {
+                  const el = document.getElementById("contact");
+                  if (el) {
+                    const y = el.getBoundingClientRect().top + window.pageYOffset - 68;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                  }
+                }}
                 sx={{
                   bgcolor: "#3358D3",
                   color: "white",

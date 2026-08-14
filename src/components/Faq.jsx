@@ -204,17 +204,26 @@ export default function Faq() {
           pt: { xs: 4, sm: 10, md: 16, lg: 25 },
         }}
       >
-        <Box
-          component="img"
-          src={faq1}
-          alt="Hogist catering service"
-          sx={{
-            width: "100%",
-            height: { xs: 320, sm: 420, md: 480, lg: 560 },
-            borderRadius: "30px",
-            objectFit: "cover",
-          }}
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7, ease: easeOut }}
+          style={{ width: "100%" }}
+        >
+          <Box
+            component="img"
+            src={faq1}
+            alt="Hogist catering service"
+            sx={{
+              width: "100%",
+              height: { xs: 320, sm: 420, md: 480, lg: 560 },
+              borderRadius: "30px",
+              objectFit: "cover",
+              display: "block",
+            }}
+          />
+        </motion.div>
       </Box>
     </Box>
   );
