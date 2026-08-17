@@ -3,6 +3,7 @@ import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 import { motion } from "framer-motion";
 
 export default function ClientSucess() {
+const fontFamily = "Poppins, sans-serif";
     const success = [{
         id: 1,
         sm: "Auto parts · Sriperumbudur",
@@ -33,12 +34,10 @@ export default function ClientSucess() {
                 textAlign: { xs: "center", }
             }}>
                 <Typography sx={{
-                    color: "black", fontWeight: 400, fontSize: "16px", fontFamily: "Inter Tight, sans-serif",
-                    mb: 1,color:"#868689"
-
+                    color: "#868689", fontWeight: 400, fontSize: "16px", fontFamily,
+                    mb: 1,
                 }}>
                     CLIENT SUCCESS
-
                 </Typography>
 
                 <motion.div
@@ -48,28 +47,21 @@ export default function ClientSucess() {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
                     <Typography sx={{
-                        color: "black", fontWeight: {xs:800,md:700}, fontSize: { xs: "28px", sm: "34px", md: "40px" }, fontFamily: "Inter Tight, sans-serif",
+                        color: "black", fontWeight: { xs: 800, md: 700 }, fontSize: { xs: "28px", sm: "34px", md: "40px" }, fontFamily,
                         mb: 1,
-
                     }}>
                         PROVEN ACROSS CHENNAI'S INDUSTRIES
-
                     </Typography>
                 </motion.div>
 
                 <Typography sx={{
-                    color: "#868689", fontWeight: 200, fontSize: "18px", fontFamily: "Inter Tight, sans-serif",
+                    color: "#868689", fontWeight: 200, fontSize: "18px", fontFamily,
                     mb: 3, pl: { xs: 0, md: 10 },
-
                 }}>
                     Real deployments, real operational outcomes.
-
-
                 </Typography>
-
-
-
             </Box>
+
             <Box sx={{
                 display: "flex",
                 flexDirection: { xs: "column", md: "row" },
@@ -79,7 +71,6 @@ export default function ClientSucess() {
             }}>
                 {success.map((succes, i) => {
                     return (
-
                         <motion.div
                             key={succes.id}
                             initial={{ opacity: 0, y: 30 }}
@@ -87,7 +78,6 @@ export default function ClientSucess() {
                             viewport={{ once: true, amount: 0.3 }}
                             transition={{ duration: 0.5, delay: i * 0.08, ease: "easeOut" }}
                         >
-
                             <Box
                                 sx={{
                                     display: "flex",
@@ -101,47 +91,37 @@ export default function ClientSucess() {
                                     maxWidth: 620,
                                     mb: 4,
                                 }}>
-
                                 <Typography sx={{
-                                    color: "black", fontWeight: {xs:800,md:600}, fontSize: "20px", fontFamily: "Inter Tight, sans-serif",
+                                    color: "black", fontWeight: { xs: 800, md: 600 }, fontSize: "20px", fontFamily,
                                     mb: 1,
-
                                 }}>
                                     {succes.sm}
-
-
                                 </Typography>
+
                                 <Typography sx={{
-                                    color: "#868689", fontWeight: 200, fontSize: "18px", fontFamily: "Inter Tight, sans-serif",
+                                    color: "#868689", fontWeight: 200, fontSize: "18px", fontFamily,
                                     mb: 1,
                                     display: "flex",
                                     gap: 2
-
-
                                 }}>
-
                                     <Typography sx={{
-                                        color: "black", fontWeight: 700, fontSize: "18px", fontFamily: "Inter Tight, sans-serif",
+                                        color: "black", fontWeight: 700, fontSize: "18px", fontFamily,
                                         mb: 1,
-
-
                                     }}> Challenge:</Typography>{succes.Challenge}
-
                                 </Typography>
-                                <Typography sx={{
-                                    color: "#868689", fontWeight: 200, fontSize: "18px", fontFamily: "Inter Tight, sans-serif",
-                                    mb: 1, display: "flex", gap: 2
 
+                                <Typography sx={{
+                                    color: "#868689", fontWeight: 200, fontSize: "18px", fontFamily,
+                                    mb: 1, display: "flex", gap: 2
                                 }}>
                                     <Typography sx={{
-                                        color: "black", fontWeight: 700, fontSize: "18px", fontFamily: "Inter Tight, sans-serif",
+                                        color: "black", fontWeight: 700, fontSize: "18px", fontFamily,
                                         mb: 1,
-
-
                                     }}> Solution:</Typography>{succes.Solution}
-
                                 </Typography>
+
                                 <Divider></Divider>
+
                                 <Typography
                                     sx={{
                                         color: "#3358D3",
@@ -151,21 +131,17 @@ export default function ClientSucess() {
                                         display: "flex",
                                         alignItems: "center",
                                         gap: 1,
+                                        fontFamily,
                                     }}
                                 >
                                     <ArrowForwardOutlinedIcon sx={{ color: "#3358D3", fontSize: "18px", }} />
                                     {succes.move}
                                 </Typography>
                             </Box>
-
-
                         </motion.div>
-
                     )
                 })}
             </Box>
         </Box>
-
-
     )
 }

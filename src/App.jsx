@@ -13,6 +13,7 @@ import Contacts from './components/Contacts.jsx'
 import Footer from './components/Footer.jsx'
 import Coverage from './components/Coverage'
 import WhatsAppFloat from './components/WhatsAppFloat.jsx'
+import Stats1 from './components/Stats1.jsx'
 // import ResponsiveLocationsMap from "./components/ResponsiveLocationsMap"
 
 export default function App(){
@@ -20,7 +21,8 @@ export default function App(){
         <div>
             <Navbar/>
             <Hero/>
-            <Stats/>
+            {/* <Stats/> */}
+            <Stats1></Stats1>
             <Numbers/>
             <Services/>
             <WhyHogist/>

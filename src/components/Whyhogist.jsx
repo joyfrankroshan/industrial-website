@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react"
 import { LuBadgeCheck, LuSmartphone, LuUserCheck } from "react-icons/lu";
 
 export default function Whyhogist(){
+const fontFamily = "Poppins, sans-serif";
     const datas=[{
         id:1,
         bg:"FSSAI & ISO certified",
@@ -68,7 +69,7 @@ useEffect(()=>{
                 width:"100%"
             }}>
                 <Typography sx={{
-                                                    fontFamily: "Inter Tight, sans-serif",
+                                                    fontFamily,
                   fontWeight: 500,
                   fontSize: "16px",
                   mb:1,
@@ -87,7 +88,7 @@ useEffect(()=>{
 >
 
                 <Typography sx={{
-                                                    fontFamily: "Inter Tight, sans-serif",
+                                                    fontFamily,
                   fontWeight: 700,
                  fontSize: {
   xs: "28px",
@@ -103,7 +104,7 @@ useEffect(()=>{
                 </Typography>
                 </motion.div>
                 <Typography sx={{
-                fontFamily: "Inter Tight, sans-serif",
+                fontFamily,
       fontWeight: 500,
       fontSize: "16px",
       color: "#868689",
@@ -136,7 +137,7 @@ useEffect(()=>{
                     </Typography>
                     <Typography
                     sx={{
-                         fontFamily: "Inter Tight, sans-serif",
+                         fontFamily,
       fontWeight: 500,
       fontSize: "16px",
 paddingBottom: 1
@@ -221,7 +222,7 @@ paddingBottom: 1
     >
       <Typography
         sx={{
-          fontFamily: "Inter Tight, sans-serif",
+          fontFamily,
           fontWeight: {xs:800,md:600},
           fontSize: "20px",
           mb: 1,
@@ -232,7 +233,7 @@ paddingBottom: 1
 
       <Typography
         sx={{
-          fontFamily: "Inter Tight, sans-serif",
+          fontFamily,
           fontWeight: 500,
           fontSize: "16px",
           color: "#868689",

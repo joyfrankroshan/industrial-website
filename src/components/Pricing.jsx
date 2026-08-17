@@ -3,7 +3,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import NorthEastIcon from "@mui/icons-material/NorthEast";
 import { motion } from "framer-motion";
 export default function Pricing() {
-  const items = [
+const fontFamily = "Poppins, sans-serif";  const items = [
     {
       id: 1,
       plan: "Up to 200 workers",
@@ -60,7 +60,7 @@ export default function Pricing() {
       >
         <Typography
           sx={{
-            fontFamily: "Inter Tight, sans-serif",
+            fontFamily,
             fontWeight: 500,
             fontSize: "16px",
             color: "#868689",
@@ -77,7 +77,7 @@ export default function Pricing() {
 >
         <Typography
           sx={{
-            fontFamily: "Inter Tight, sans-serif",
+            fontFamily,
             fontWeight: {xs:800,md:600},
             fontSize: { xs: "28px", md: "43px" },
             px: { lg: 40 },
@@ -90,7 +90,7 @@ export default function Pricing() {
         
   <Typography
     sx={{
-      fontFamily: "Inter Tight, sans-serif",
+      fontFamily,
       fontWeight: 500,
       fontSize: "16px",
       color: "#868689",
@@ -150,7 +150,7 @@ export default function Pricing() {
             >
               <Typography
                 sx={{
-                  fontFamily: "Inter Tight, sans-serif",
+                  fontFamily,
                   fontWeight: {xs:800,md:700},
                   fontSize: "18px",
                 }}
@@ -168,7 +168,7 @@ export default function Pricing() {
   flexGrow: 1,             // add
 }}>              <Typography
                 sx={{
-                  fontFamily: "Inter Tight, sans-serif",
+                  fontFamily,
                   fontWeight: {xs:800,md:700},
                   fontSize: "24px",
                   mb: 2,
@@ -180,7 +180,7 @@ export default function Pricing() {
               <Box sx={{ display: "flex", alignItems: "baseline", mb: 3 }}>
                 <Typography
                   sx={{
-                    fontFamily: "Inter Tight, sans-serif",
+                    fontFamily,
                     fontWeight: 700,
                     fontSize: {xs:"32px",md:"48px"},
                     color: "#3358D3",
@@ -190,7 +190,7 @@ export default function Pricing() {
                 </Typography>
                 <Typography
                   sx={{
-                    fontFamily: "Inter Tight, sans-serif",
+                    fontFamily,
                     fontWeight: 500,
                     fontSize: "18px",
                     color: "#868689",
@@ -212,7 +212,7 @@ export default function Pricing() {
                     <CheckCircleIcon sx={{ color: "#3358D3", fontSize: 20 }} />
                     <Typography
                       sx={{
-                        fontFamily: "Inter Tight, sans-serif",
+                        fontFamily,
                         fontWeight: 500,
                         fontSize: "17px",
                       }}
@@ -242,7 +242,7 @@ export default function Pricing() {
                   py: 1.5,
                                     borderRadius: "30px",
                   textTransform: "none",
-                  fontFamily: "Inter Tight, sans-serif",
+                  fontFamily,
                   fontWeight: 600,
                   fontSize: "16px",
                   display: "flex",

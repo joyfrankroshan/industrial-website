@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 import { motion } from "framer-motion";
 import Counter from "./Counter";
 
+const fontFamily = "Poppins, sans-serif";
 const stats = [
   { end: 10000, decimals: 0, suffix: "+", label: "Meals served daily" },
   { end: 30, decimals: 0, suffix: "+", label: "Active industrial clients" },
@@ -85,7 +86,7 @@ export default function Numbers() {
                     fontSize: { xs: "34px", sm: "38px", md: "48px" },
                     fontWeight: {xs:1000,md:700},
                     color: "#0F172A",
-                    fontFamily: "Inter Tight, sans-serif",
+                    fontFamily,
                     display: "block",
                     textAlign: "center",
                   }}
@@ -98,7 +99,7 @@ export default function Numbers() {
                     zIndex: 1,
                     fontSize: { xs: "12px", md: "13px" },
                     color: "#0F172A",
-                    fontFamily: "Inter Tight, sans-serif",
+                    fontFamily,
                     fontWeight: 700,
                     letterSpacing: "0.03em",
                     textTransform: "uppercase",

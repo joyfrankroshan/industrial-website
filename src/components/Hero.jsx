@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { Box, Typography, Button, Divider } from "@mui/material";
-import { FiMessageCircle, FiSunrise, FiSun, FiMoon } from "react-icons/fi";
+import { FiMessageCircle } from "react-icons/fi";
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
-
-
+import ShiftCard from "./ShiftCard.jsx";
 
 export default function Hero() {
   const darkbackground = "#3358D3";
+  const fontFamily = "Poppins, sans-serif";
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -22,17 +22,10 @@ export default function Hero() {
     title4: "RUN",
     title5: " LIKE",
     title6: "CLOCKWORK.",
-
     desc:
       "FSSAI-certified industrial catering serving 10,000+ workers daily across Chennai's manufacturing belt — shift after shift, without a miss.",
     stats: ["10,000+ meals / day", "FSSAI certified", "Serving since 2017"],
   };
-
-  const shifts = [
-    { label: "Morning", value: "4,200", time: "6:00 – 10:00 AM · Breakfast + lunch prep",icon:FiSunrise },
-    { label: "Afternoon", value: "3,600", time: "12:00 – 3:00 PM · Hot lunch service",icon:FiSun },
-    { label: "Night", value: "2,200", time: "8:00 PM – 1:00 AM · Dinner + late shift",icon:FiMoon },
-  ];
 
   const animation = (delay = "0s") => ({
     opacity: 1,
@@ -52,14 +45,13 @@ export default function Hero() {
       sx={{
         position: "relative",
         overflowX: "hidden",
-        
-        minHeight: {xs:"80vh",md:"85vh"},
+        minHeight: { xs: "80vh", md: "85vh" },
         bgcolor: darkbackground,
         display: "flex",
         alignItems: "center",
         flexDirection: { xs: "column", md: "row" },
         justifyContent: "center",
-        gap: { xs: 6, md: 5 },
+        gap: { xs: 6, md: 10 },
         px: { xs: 3, md: 2 },
         pt: { xs: 4, md: 5 },
         pb: { xs: 4, md: 10 },
@@ -76,12 +68,9 @@ export default function Hero() {
         <Typography
           sx={{
             color: "#fff",
-            mb: 2, 
-            fontSize: {
-              xs: "10px",
-              sm: "14px",
-            },
-            fontFamily: "Inter Tight, sans-serif",
+            mb: 2,
+            fontSize: { xs: "10px", sm: "14px" },
+            fontFamily,
             ...(show ? animation("0s") : hiddenAnimation),
           }}
         >
@@ -94,16 +83,16 @@ export default function Hero() {
             lineHeight: 1.3,
             paddingRight: 1,
             fontSize: {
-              xs: "26px",   // was 35px
-  sm: "32px",   // ADD THIS
-              md:"40px",
+              xs: "26px",
+              sm: "32px",
+              md: "40px",
               lg: "53.406px",
             },
-            fontFamily: "Inter Tight, sans-serif",
+            fontFamily,
             ...(show ? animation("0.2s") : hiddenAnimation),
           }}
         >
-          <Box component="span" sx={{ fontWeight:{xs:800,md:700 }}}>
+          <Box component="span" sx={{ fontWeight: { xs: 800, md: 700 } }}>
             {content.title1}
           </Box>
 
@@ -113,7 +102,7 @@ export default function Hero() {
 
           <br />
 
-          <Box component="span" sx={{ fontWeight: {xs:800,md:700 }}}>
+          <Box component="span" sx={{ fontWeight: { xs: 800, md: 700 } }}>
             {content.title3}
           </Box>
           <br />
@@ -136,21 +125,16 @@ export default function Hero() {
             color: "#fff",
             fontWeight: 500,
             fontSize: { xs: "18px" },
-            paddingRight:{
-              xs:0,
-              md:2,
-              lg:25,
-
-
-            },
+            paddingRight: { xs: 0, md: 2, lg: 25 },
             lineHeight: 1.5,
-            fontFamily: "Inter Tight, sans-serif",
+            fontFamily,
             mt: 1,
             ...(show ? animation("0.3s") : hiddenAnimation),
           }}
         >
           {content.desc}
         </Typography>
+
         <Box
           sx={{
             display: "flex",
@@ -161,7 +145,7 @@ export default function Hero() {
           }}
         >
           <Button
-                                              startIcon={<ArrowForwardOutlinedIcon size={20} strokeWidth={3} /> } 
+            startIcon={<ArrowForwardOutlinedIcon size={20} strokeWidth={3} />}
             onClick={() => {
               const el = document.getElementById("contact");
               if (el) {
@@ -176,8 +160,8 @@ export default function Hero() {
               py: 2,
               borderRadius: "15px",
               fontSize: "15px",
-              fontWeight: {xs:800,md:700},
-              fontFamily: "Inter Tight, sans-serif",
+              fontWeight: { xs: 800, md: 700 },
+              fontFamily,
               textTransform: "none",
               ...(show ? animation("0.5s") : hiddenAnimation),
               "&:hover": {
@@ -191,16 +175,22 @@ export default function Hero() {
           </Button>
 
           <Button
-            onClick={() => window.open("https://api.whatsapp.com/send/?phone=919962667733&text=&type=phone_number&app_absent=0", "_blank")}
-startIcon={<FiMessageCircle size={20} strokeWidth={3} />}            sx={{
+            onClick={() =>
+              window.open(
+                "https://api.whatsapp.com/send/?phone=919962667733&text=&type=phone_number&app_absent=0",
+                "_blank"
+              )
+            }
+            startIcon={<FiMessageCircle size={20} strokeWidth={3} />}
+            sx={{
               bgcolor: "#fff",
               color: darkbackground,
               px: 3,
               py: 2,
               borderRadius: "15px",
               fontSize: "15px",
-              fontWeight: {xs:800,md:700},
-              fontFamily: "Inter Tight, sans-serif",
+              fontWeight: { xs: 800, md: 700 },
+              fontFamily,
               textTransform: "none",
               ...(show ? animation("0.6s") : hiddenAnimation),
               "&:hover": {
@@ -213,14 +203,14 @@ startIcon={<FiMessageCircle size={20} strokeWidth={3} />}            sx={{
             Chat on WhatsApp
           </Button>
         </Box>
+
         <Divider
           sx={{
             my: 2,
-            borderColor: "#fff",  
+            borderColor: "#fff",
             opacity: 0.5,
-             borderBottomWidth: "0.2px",
+            borderBottomWidth: "0.2px",
             ...(show ? animation("0.3s") : hiddenAnimation),
-             
           }}
         ></Divider>
 
@@ -244,7 +234,7 @@ startIcon={<FiMessageCircle size={20} strokeWidth={3} />}            sx={{
                 alignItems: "center",
                 fontWeight: 500,
                 fontSize: "14px",
-                fontFamily: "Inter Tight, sans-serif",
+                fontFamily,
                 color: "#fff",
               }}
             >
@@ -265,97 +255,7 @@ startIcon={<FiMessageCircle size={20} strokeWidth={3} />}            sx={{
       </Box>
 
       {/* RIGHT: SHIFT CARD */}
-      <Box
-        sx={{
-          position: "relative",
-          bgcolor: "#fff",
-          
-          width: { xs: "100%",sm:"80%", md: 400 },
-          maxWidth: { xs: 400, md: 400 },
-          height: "auto",
-          minHeight: { md: 40 },
-          p: { xs: 3, md: 4 },
-          borderRadius: "24px",
-          flexShrink: 0,
-          ...(show ? animation("0.3s") : hiddenAnimation),
-        }}
-      >
-        <Typography
-          sx={{
-            fontSize: "19px",
-            fontFamily: "Inter Tight, sans-serif",
-            color: "#1d1d1e",
-            fontWeight: {xs:800,md:600},
-            mb: 1,
-            textTransform: "none",
-          }}
-        >
-          ONE KITCHEN, EVERY SHIFT
-        </Typography>
-
-        <Typography
-          sx={{
-            fontSize: "13px",
-            fontFamily: "Inter Tight, sans-serif",
-            color: "#868689",
-            wordSpacing: "2px",
-            mb: 2,
-          }}
-        >
-          Round-the-clock meal cycles built for 24×7 plants
-        </Typography>
-
-        <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
-          {shifts.map((shift, i) => {
-            const ShiftIcon=shift.icon;
-            return(
-
-            <Box key={i} sx={{ bgcolor: "#fafafa", p: 2, borderRadius: "8px",display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  gap: 2, }}>
-              <Box
-                sx={{
-                  display: "flex",  
-                  alignItems: "center",
-                  gap: 2,
-                }}
-               
-              >
-                <Box
-                    sx={{
-                      width: 60,
-                      height: 60,
-                      borderRadius: "12px",
-                      bgcolor: "rgba(51, 88, 211, 0.08)",
-                      color: "#3358D3",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexShrink: 0,
-                    }}
-                  >
-                    <ShiftIcon size={25} />
-                  </Box>
-                <Box>
-                  <Typography sx={{ color: "black", fontWeight: {xs:800,md:600}, fontSize: "16px", fontFamily: "Inter Tight, sans-serif" }}>
-                  {shift.label}
-                </Typography>
-                 <Typography sx={{ color: "#868689", fontSize: "12.5px", mt: 1, fontFamily: "Inter Tight, sans-serif", }}>
-                {shift.time}
-              </Typography>
-                
-                  </Box>
-                
-              </Box>
-             
-              <Typography sx={{ color: "#3358D3", fontWeight: {xs:900,md:700}, fontSize: "20px", fontFamily: "Inter Tight, sans-serif" }}>
-                  {shift.value}
-                </Typography>
-            </Box>
-          )})}
-        </Box>
-      </Box>
+      <ShiftCard show={show} animation={animation} hiddenAnimation={hiddenAnimation} />
     </Box>
   );
 }

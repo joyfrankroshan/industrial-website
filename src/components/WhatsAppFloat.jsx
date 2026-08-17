@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 export default function WhatsAppFloat() {
-  const phoneNumber = "919962667733";
+const fontFamily = "Poppins, sans-serif";  const phoneNumber = "919962667733";
   const whatsappUrl = `https://api.whatsapp.com/send/?phone=${phoneNumber}&text=&type=phone_number&app_absent=0`;
 
   return (
@@ -26,7 +26,7 @@ export default function WhatsAppFloat() {
         py: 2,
         borderRadius: "50px",
         boxShadow: "0 4px 14px rgba(0,0,0,0.25)",
-        fontFamily: "Inter Tight, sans-serif",
+        fontFamily,
         transition: "transform 0.2s ease, background-color 0.2s ease",
         "&:hover": {
           bgcolor: "#349a63",
@@ -39,7 +39,7 @@ export default function WhatsAppFloat() {
         sx={{
           fontSize: "14px",
           fontWeight: 700,
-          fontFamily: "Inter Tight, sans-serif",
+          fontFamily,
           display: { xs: "none", sm: "block" },
         }}
       >

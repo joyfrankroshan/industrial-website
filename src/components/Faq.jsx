@@ -6,10 +6,10 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import faq1 from "../assets/faq1.png";
 
-const FONT = "Inter Tight, sans-serif";
 const BRAND_BLUE = "#3358D3";
 
 export default function Faq() {
+const fontFamily = "Poppins, sans-serif";
   const Qa = [
     {
       id: 1,
@@ -59,16 +59,16 @@ export default function Faq() {
     <Box
       id="faq"
       sx={{
-        display:"flex",
+        display: "flex",
         flexDirection: { xs: "column", md: "row" },
         gap: { xs: 4, md: 8 },
         alignItems: { xs: "center" },
-        justifyContent:"space-between",
-        
+        justifyContent: "space-between",
+
         py: { xs: 4, md: 3 },
         px: { xs: 2, sm: 3, md: 2 },
-        width:"100%",
-        pl: { xs: 2, sm: 8, md: 10,  },
+        width: "100%",
+        pl: { xs: 2, sm: 8, md: 10 },
         pr: { xs: 2, sm: 8, md: 2 },
       }}
     >
@@ -78,8 +78,8 @@ export default function Faq() {
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "flex-start",
-          gap:2,
-          
+          gap: 2,
+
           px: 1,
           width: "100%",
         }}
@@ -90,30 +90,31 @@ export default function Faq() {
             color: BRAND_BLUE,
             borderRadius: "20px",
             fontSize: { xs: "12px", sm: "14px" },
-            fontWeight: {xs:800,md:600},
+            fontWeight: { xs: 800, md: 600 },
             px: 2,
-            fontFamily: FONT,
+            fontFamily,
           }}
         >
           FAQ
         </Typography>
         <motion.div
-                    initial={{ opacity: 0, x: 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.6, ease: easeOut }}
-                >  <Typography
-          sx={{
-            fontSize: { xs: "26px", sm: "32px", md: "40px" },
-            fontWeight: {xs:800,md:600},
-            fontFamily: FONT,
-            textAlign: "left",
-          }}
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6, ease: easeOut }}
         >
-          Questions procurement teams ask
-        </Typography></motion.div>
-
-       
+          {" "}
+          <Typography
+            sx={{
+              fontSize: { xs: "26px", sm: "32px", md: "40px" },
+              fontWeight: { xs: 800, md: 600 },
+              fontFamily,
+              textAlign: "left",
+            }}
+          >
+            Questions procurement teams ask
+          </Typography>
+        </motion.div>
 
         {/* Map over all FAQ items */}
         <Box
@@ -154,9 +155,9 @@ export default function Faq() {
                 >
                   <Typography
                     sx={{
-                      fontSize: {  xs: "16px", md: "18px" },
-                      fontWeight: {xs:800,md:510},
-                      fontFamily: FONT,
+                      fontSize: { xs: "16px", md: "18px" },
+                      fontWeight: { xs: 800, md: 510 },
+                      fontFamily,
                     }}
                   >
                     {item.qs}
@@ -165,7 +166,7 @@ export default function Faq() {
                   {isOpen ? (
                     <KeyboardArrowUpIcon sx={{ flexShrink: 0 }} />
                   ) : (
-                    <KeyboardArrowDownIcon sx={{ flexShrink:0 }} />
+                    <KeyboardArrowDownIcon sx={{ flexShrink: 0 }} />
                   )}
                 </Box>
 
@@ -178,7 +179,7 @@ export default function Faq() {
                         color: "#797e88",
                         fontWeight: 400,
                         wordSpacing: 1,
-                        fontFamily: FONT,
+                        fontFamily,
                         lineHeight: 1.6,
                       }}
                     >

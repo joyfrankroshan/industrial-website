@@ -3,6 +3,7 @@ import {motion} from "framer-motion";
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 
 export default function Services(){
+const fontFamily = "Poppins, sans-serif";
     const services=[
         {
             id:1,
@@ -88,7 +89,7 @@ export default function Services(){
                    fontSize: "14px",
               fontWeight: 600,
               letterSpacing: "0.08em",
-              fontFamily: "Inter Tight, sans-serif",
+              fontFamily,
               color:"#868689"
                 }}
                 >
@@ -105,7 +106,7 @@ export default function Services(){
                 sx={{
                     fontSize: { xs: "28px", md: "43px" },
               fontWeight: 700,
-              fontFamily: "Inter Tight, sans-serif",
+              fontFamily,
               lineHeight: 1.2,
               mt: 1,
                 }}
@@ -117,7 +118,7 @@ export default function Services(){
             <Typography sx={{
                fontSize: "15px",
               fontWeight: 400,
-              fontFamily: "Inter Tight, sans-serif",
+              fontFamily,
               color:"#868689",
               
               mt: 2,
@@ -191,7 +192,7 @@ export default function Services(){
                         >
 
                             <Typography sx={{
-                                fontFamily: "Inter Tight, sans-serif",
+                                fontFamily,
                   fontWeight: {xs:800,md:500},
                   fontSize: "24px"
                             }}>{service.icon}</Typography>
@@ -199,7 +200,7 @@ export default function Services(){
                         <Typography sx={{
                             fontSize: "19px",
                   fontWeight: 700,
-                  fontFamily: "Inter Tight, sans-serif",
+                  fontFamily,
                   mb: 1.5,
                         }}>
                             {service.title}
@@ -209,7 +210,7 @@ export default function Services(){
   sx={{
     fontSize: "14px",
     fontWeight: 400,
-    fontFamily: "Inter Tight, sans-serif",
+    fontFamily,
     color: "#64748B",
     lineHeight: 1.6,
     flexGrow: 1,
@@ -231,7 +232,7 @@ export default function Services(){
     px: 3,
     py: 2.5,
     mt: 3,
-    fontFamily: "Inter Tight, sans-serif",
+    fontFamily,
     fontWeight: 500,
     fontSize: "16px",
     cursor: "pointer",

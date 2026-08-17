@@ -1,15 +1,15 @@
 import { Box, Typography } from "@mui/material"
 import { motion, easeOut } from "framer-motion"
 import StarRateRoundedIcon from '@mui/icons-material/StarRateRounded';
+
 export default function Testtimonals() {
+const fontFamily = "Poppins, sans-serif";
     const Testi = [{
         id: 1,
         name: "R. Kumar",
         role: "HR Manager, Auto Mfg · Sriperumbudur",
         pas: "Reliable shift meals with zero quality drops. Our night-shift complaints simply disappeared.",
         icon: "RK"
-
-
     },
     {
         id: 2,
@@ -17,8 +17,6 @@ export default function Testtimonals() {
         role: "Admin Head, Pharma · Oragadam",
         pas: "Compliance paperwork was ready before every audit. It made our admin job effortless",
         icon: "SP"
-
-
     },
     {
         id: 3,
@@ -26,8 +24,6 @@ export default function Testtimonals() {
         role: "Plant Admin, Electronics · Ambattur",
         pas: "Scaled from 300 to 900 workers without a single service gap. That's rare",
         icon: "MV"
-
-
     }]
     return (
         <Box sx={{
@@ -44,13 +40,11 @@ export default function Testtimonals() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                fontFamily: "Inter Tight, sans-serif",
+                fontFamily,
             }}>
                 <Typography sx={{
                     fontSize: { xs: "14px", md: "18px" },
                     color: "#868689",
-
-
                 }}>
                     TESTIMONIALS
                 </Typography>
@@ -64,11 +58,9 @@ export default function Testtimonals() {
                     <Typography sx={{
                         fontSize: { xs: "28px", sm: "36px", md: "43px" },
                         color: "black",
-                        fontWeight: {xs:800,md:600}
-
+                        fontWeight: { xs: 800, md: 600 }
                     }}>
                         Industrial zones we serve
-
                     </Typography>
                 </motion.div>
 
@@ -79,16 +71,11 @@ export default function Testtimonals() {
                     mt: 1,
                     textAlign: { xs: "center" },
                     px: { xs: 2, md: 0 }
-
                 }}>
                     Established operations across Chennai's core manufacturing corridors.
-
-
-
                 </Typography>
-
-
             </Box>
+
             <Box sx={{
                 display: "flex",
                 flexDirection: { xs: "column", md: "row" },
@@ -106,23 +93,23 @@ export default function Testtimonals() {
                             transition={{ duration: 0.5, delay: i * 0.08, ease: easeOut }}>
 
                             <Box
-  sx={{
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  borderRadius: "20px",
-  boxShadow: "0px 4px 20px rgba(0,0,0,0.08)",
-  px: { xs: 2, sm: 3 },
-  py: { xs: 2, sm: 3 },
-  width: "100%",
-  maxWidth: 340,
+                                sx={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    borderRadius: "20px",
+                                    boxShadow: "0px 4px 20px rgba(0,0,0,0.08)",
+                                    px: { xs: 2, sm: 3 },
+                                    py: { xs: 2, sm: 3 },
+                                    width: "100%",
+                                    maxWidth: 340,
 
-  transition: "transform 0.3s ease",
+                                    transition: "transform 0.3s ease",
 
-  "&:hover": {
-    transform: "translateY(-8px)",
-  },
-}}>
+                                    "&:hover": {
+                                        transform: "translateY(-8px)",
+                                    },
+                                }}>
                                 <Box sx={{
                                     display: "flex",
                                     alignItems: "center",
@@ -131,47 +118,34 @@ export default function Testtimonals() {
                                 }}>
                                     <Box
                                         sx={{
-                                            color: "white", fontWeight: 700, fontSize: "18px", fontFamily: "Inter Tight, sans-serif",
+                                            color: "white", fontWeight: 700, fontSize: "18px", fontFamily,
                                             mb: 1, display: "flex", bgcolor: "#3358D3", borderRadius: "50%",
-                                            width: 60, height: 60, color: "white",
+                                            width: 60, height: 60,
                                             justifyContent: "center", alignItems: "center"
                                         }}>
                                         {testim.icon}
                                     </Box>
                                     <Typography
                                         sx={{
-                                            color: "black", fontWeight: {xs:800,md:600}, fontSize: "20px", fontFamily: "Inter Tight, sans-serif",
+                                            color: "black", fontWeight: { xs: 800, md: 600 }, fontSize: "20px", fontFamily,
                                         }}>
                                         {testim.name}
                                     </Typography>
                                     <Typography
                                         sx={{
-                                            color: "#868689", fontWeight: 400, fontSize: "15px", fontFamily: "Inter Tight, sans-serif",
+                                            color: "#868689", fontWeight: 400, fontSize: "15px", fontFamily,
                                         }}>
                                         {testim.role}
                                     </Typography>
                                     <Typography
                                         sx={{
-                                            color: "black", fontWeight: 400, fontSize: "17px", fontFamily: "Inter Tight, sans-serif",
+                                            color: "black", fontWeight: 400, fontSize: "17px", fontFamily,
                                             display: "flex",
                                             justifyContent: "center", px: 2
                                         }}>
                                         {testim.pas}
                                     </Typography>
-                                    {/* <Box sx={{
-        display: "flex",
-        alignItems: "center",
-        gap: 0.5,
-        border: "1px solid #E2E2E2",
-        borderRadius: "999px",
-        px: 2,
-        py: 0.5,
-        mt: 1,
-    }}>
-        {[...Array(5)].map((_, idx) => (
-            <StarRateRoundedIcon key={idx} sx={{ color: "#3358D3", fontSize: "22px" }} />
-        ))}
-    </Box>  */}
+
                                     <Box sx={{
                                         display: "flex",
                                         alignItems: "center",
@@ -182,34 +156,17 @@ export default function Testtimonals() {
                                         px: 1,
                                         py: 1,
                                         mt: 1,
-
-
                                     }}>
                                         {[...Array(5)].map((item, ind) => (
                                             <StarRateRoundedIcon key={ind} sx={{ color: "#3358D3", fontSize: "22px" }} />
-
-
                                         ))}
-
                                     </Box>
                                 </Box>
-
                             </Box>
-
-
-
-
                         </motion.div>
                     )
-                }
-                )
-                }
+                })}
             </Box>
-
-
         </Box>
-
-
-
     )
 }

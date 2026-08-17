@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 
 export default function Stats() {
+const fontFamily = "Poppins, sans-serif";
   const companies = ["Auto Co", "Pharma Ltd", "Textiles", "Electronics", "SEZ Unit"];
 
   return (
@@ -37,7 +38,7 @@ export default function Stats() {
               fontWeight: 500,
               maxWidth: "150px",
               lineHeight: 1.35,
-              fontFamily: "Inter Tight, sans-serif",
+              fontFamily,
             }}
           >
             Trusted by 30+ factories across Tamil Nadu
@@ -73,7 +74,7 @@ export default function Stats() {
                   bgcolor: "#3358D3",
                   color: "white",
                   borderRadius: "14px",
-                  fontFamily: "Inter Tight, sans-serif",
+                  fontFamily,
                   fontWeight: {xs:800,md:600},
                   letterSpacing: "0.06em",
                   fontSize: "15px",

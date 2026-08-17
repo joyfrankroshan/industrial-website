@@ -2,8 +2,7 @@ import { Box, Typography, Chip } from "@mui/material";
 import hogistLogo from "../assets/header-removebg-preview.png";
 
 export default function Footer() {
-  const FONT = "Inter Tight, sans-serif";
-  const BRAND_BLUE = "#3358D3";
+const fontFamily = "Poppins, sans-serif";  const BRAND_BLUE = "#3358D3";
 
   const handleNavClick = (id) => {
     const el = document.getElementById(id);
@@ -43,40 +42,6 @@ export default function Footer() {
         pb: 0,
       }}
     >
-      {/* Decorative plus marks - top left, like image 1 */}
-      {/* <Box
-        sx={{
-          position: "absolute",
-          top: 20,
-          left: 10,
-          width: 140,
-          height: 140,
-          display: { xs: "none", md: "block" },
-          pointerEvents: "none",
-        }}
-      >
-        {[
-          [10, 10], [40, 0], [70, 20], [20, 45], [55, 55],
-          [85, 60], [15, 80], [45, 90], [0, 55],
-        ].map(([x, y], i) => (
-          <Typography
-            key={i}
-            sx={{
-              position: "absolute",
-              top: y,
-              left: x,
-              color: BRAND_BLUE,
-              fontSize: 16,
-              fontWeight: 700,
-              opacity: 0.7,
-              userSelect: "none",
-            }}
-          >
-            +
-          </Typography>
-        ))}
-      </Box> */}
-
       <Box
         sx={{
           maxWidth: 1400,
@@ -115,7 +80,7 @@ export default function Footer() {
 
             <Typography
               sx={{
-                fontFamily: FONT,
+                fontFamily,
                 color: "#9aa0ad",
                 fontSize: "15px",
                 lineHeight: 1.7,
@@ -138,7 +103,7 @@ export default function Footer() {
                   sx={{
                     bgcolor: "#1c2130",
                     color: "#c7cbd4",
-                    fontFamily: FONT,
+                    fontFamily,
                     fontWeight: 600,
                     fontSize: "13px",
                     borderRadius: "8px",
@@ -153,7 +118,7 @@ export default function Footer() {
           <Box>
             <Typography
               sx={{
-                fontFamily: FONT,
+                fontFamily,
                 color: "#fff",
                 fontWeight: 700,
                 fontSize: "17px",
@@ -167,7 +132,7 @@ export default function Footer() {
                 <Typography
                   key={item}
                   sx={{
-                    fontFamily: FONT,
+                    fontFamily,
                     color: "#9aa0ad",
                     fontSize: "15px",
                     fontWeight: 300,
@@ -185,7 +150,7 @@ export default function Footer() {
           <Box>
             <Typography
               sx={{
-                fontFamily: FONT,
+                fontFamily,
                 color: "#fff",
                 fontWeight: 700,
                 fontSize: "17px",
@@ -199,7 +164,7 @@ export default function Footer() {
                 <Typography
                   key={item}
                   sx={{
-                    fontFamily: FONT,
+                    fontFamily,
                     color: "#9aa0ad",
                     fontSize: "15px",
                     fontWeight: 300,
@@ -217,7 +182,7 @@ export default function Footer() {
           <Box>
             <Typography
               sx={{
-                fontFamily: FONT,
+                fontFamily,
                 color: "#fff",
                 fontWeight: 700,
                 fontSize: "17px",
@@ -232,7 +197,7 @@ export default function Footer() {
                   key={label}
                   onClick={() => handleNavClick(id)}
                   sx={{
-                    fontFamily: FONT,
+                    fontFamily,
                     color: "#9aa0ad",
                     fontSize: "15px",
                     fontWeight: 300,
@@ -268,7 +233,7 @@ export default function Footer() {
       >
         <Typography
           sx={{
-            fontFamily: FONT,
+            fontFamily,
             color: "#8b909c",
             fontSize: "14px",
             fontWeight: 300,
@@ -279,7 +244,7 @@ export default function Footer() {
 
         <Typography
           sx={{
-            fontFamily: FONT,
+            fontFamily,
             color: "#8b909c",
             fontSize: "14px",
             fontWeight: 300,

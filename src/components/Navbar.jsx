@@ -13,7 +13,7 @@ import Sidebar from "./Sidebar";
 import { useState, useEffect } from "react";
 
 const darkbackground = "#3358D3";
-
+const fontFamily = "Poppins, sans-serif";
 const navLinks = [
   { label: "Services", id: "services" },
   { label: "Why Hogist", id: "why-hogist" },
@@ -85,7 +85,7 @@ export default function Navbar() {
                   color: "#1D1D1E",
                   fontSize: { md: "13px", lg: "14px" },
                   fontWeight: 600,
-                  fontFamily: "Inter Tight, sans-serif",
+                  fontFamily,
                   whiteSpace: "nowrap",
                 }}
               >
@@ -111,7 +111,7 @@ export default function Navbar() {
                 borderRadius: "15px",
                 fontSize: { md: "13px", lg: "15px" },
                 fontWeight: 700,
-                fontFamily: "Inter Tight, sans-serif",
+                fontFamily,
                 textTransform: "none",
                 whiteSpace: "nowrap",
                 "&:hover": { bgcolor: "black", color: "white" },
@@ -120,9 +120,8 @@ export default function Navbar() {
               Get a Quote
             </Button>
             <Button
-            onClick={() => window.open("https://api.whatsapp.com/send/?phone=919962667733&text=&type=phone_number&app_absent=0", "_blank")}
-            startIcon={<FiMessageCircle size={20} strokeWidth={2} />}           
-
+              onClick={() => window.open("https://api.whatsapp.com/send/?phone=919962667733&text=&type=phone_number&app_absent=0", "_blank")}
+              startIcon={<FiMessageCircle size={20} strokeWidth={2} />}
               sx={{
                 bgcolor: darkbackground,
                 color: "#fff",
@@ -131,7 +130,7 @@ export default function Navbar() {
                 borderRadius: "15px",
                 fontSize: { md: "13px", lg: "15px" },
                 fontWeight: 700,
-                fontFamily: "Inter Tight, sans-serif",
+                fontFamily,
                 textTransform: "none",
                 whiteSpace: "nowrap",
                 "&:hover": { bgcolor: "black", color: "white" },
