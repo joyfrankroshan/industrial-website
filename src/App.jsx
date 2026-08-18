@@ -14,6 +14,8 @@ import Footer from './components/Footer.jsx'
 import Coverage from './components/Coverage'
 import WhatsAppFloat from './components/WhatsAppFloat.jsx'
 import Stats1 from './components/Stats1.jsx'
+import MobileApp from "./components/MobileApp.jsx"
+import Uver from './components/ UverPage.jsx'
 // import ResponsiveLocationsMap from "./components/ResponsiveLocationsMap"
 
 export default function App(){
@@ -26,7 +28,9 @@ export default function App(){
             <Numbers/>
             <Services/>
             <WhyHogist/>
+            <MobileApp/>
             <Pricing/>
+             <Uver/>
             <ClientSucess/>
             <Testimonals/>
             <Coverage/>
@@ -35,6 +39,7 @@ export default function App(){
             <Contacts/>
             <Footer/>
             <WhatsAppFloat/>
+           
             {/* <ResponsiveLocationsMap/> */}
             
         </div>
