@@ -2,7 +2,8 @@ import { Box, Typography } from "@mui/material"
 import { motion, easeOut } from "framer-motion"
 
 export default function Coverage() {
-const fontFamily = "Poppins, sans-serif";    const BRAND_BLUE = "#3358D3";
+    const fontFamily = "Poppins, sans-serif";
+    const BRAND_BLUE = "#3358D3";
 
     const cover = [
         { id: 1, place: "SRIPERUMBUDUR", special: "Auto & electronics factories since 2018" },
@@ -58,9 +59,8 @@ const fontFamily = "Poppins, sans-serif";    const BRAND_BLUE = "#3358D3";
             <Box sx={{
                 display: "grid",
                 gridTemplateColumns: {
-                    xs: "1fr",
-                    sm: "1fr 1fr",
-                    md: "1fr 1fr 1fr"
+                    xs: "1fr 1fr",
+                    sm: "1fr 1fr 1fr"
                 },
                 gap: 2,
                 width: { xs: "100%", sm: "90%", md: "90%" }
@@ -72,26 +72,30 @@ const fontFamily = "Poppins, sans-serif";    const BRAND_BLUE = "#3358D3";
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.3 }}
                         transition={{ duration: 0.6, delay: i * 0.1, ease: easeOut }}
+                        style={{ height: "100%" }}
                     >
                         <Box
                             sx={{
                                 bgcolor: "white",
                                 boxShadow: 5,
                                 borderRadius: "10px",
-                                px: 2,
-                                py: 1,
+                                px: { xs: 1, md: 2 },
+                                py: { xs: 1, md: 1 },
                                 display: "flex",
                                 flexDirection: "column",
                                 justifyContent: "center",
                                 gap: 1,
-                                height: { xs: "110px", sm: "90px" },
+                                height: {  sm: "90px" },
+                                minHeight: { xs: "auto", sm: "100px" },
+                                width: "100%",
+                                boxSizing: "border-box",
                                 transition: "transform 0.3s ease",
                                 "&:hover": {
                                     transform: "translateY(-8px)",
                                 },
                             }}>
                             <Typography sx={{
-                                fontSize: "20px",
+                                fontSize: { xs: "10px",sm:"15px",md: "20px" },
                                 fontFamily,
                                 fontWeight: { xs: 800, md: 550 },
                                 color: BRAND_BLUE,
@@ -99,9 +103,10 @@ const fontFamily = "Poppins, sans-serif";    const BRAND_BLUE = "#3358D3";
                                 {cov.place}
                             </Typography>
                             <Typography sx={{
-                                fontSize: "14px",
+                                fontSize: { xs: "10px",sm:"12px", md: "15px" },
                                 fontWeight: 700,
                                 fontFamily,
+                                
                             }}>
                                 {cov.special}
                             </Typography>
